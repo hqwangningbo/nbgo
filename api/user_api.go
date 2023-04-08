@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hqwangningbo/gogofly/service/dto"
+	"github.com/hqwangningbo/nbgo/service/dto"
 )
 
 type UserApi struct {

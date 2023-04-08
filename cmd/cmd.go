@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/hqwangningbo/gogofly/conf"
-	"github.com/hqwangningbo/gogofly/global"
-	"github.com/hqwangningbo/gogofly/router"
-	"github.com/hqwangningbo/gogofly/utils"
+	"github.com/hqwangningbo/nbgo/conf"
+	"github.com/hqwangningbo/nbgo/global"
+	"github.com/hqwangningbo/nbgo/router"
+	"github.com/hqwangningbo/nbgo/utils"
 )
 
 func Start() {

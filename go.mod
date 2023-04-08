@@ -1,4 +1,4 @@
-module github.com/hqwangningbo/gogofly
+module github.com/hqwangningbo/nbgo
 
 go 1.19
 

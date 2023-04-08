@@ -1,7 +1,7 @@
 info:
   contact: {}
   description: 还在努力学习go ...ing
-  title: gogofly学习go实战
+  title: nbgo学习go实战
   version: v0.0.1
 paths:
   /api/v1/public/user/login:

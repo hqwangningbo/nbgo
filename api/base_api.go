@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
-	"github.com/hqwangningbo/gogofly/global"
-	"github.com/hqwangningbo/gogofly/utils"
+	"github.com/hqwangningbo/nbgo/global"
+	"github.com/hqwangningbo/nbgo/utils"
 	"go.uber.org/zap"
 	"reflect"
 )

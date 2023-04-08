@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"github.com/hqwangningbo/gogofly/model"
+	"github.com/hqwangningbo/nbgo/model"
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

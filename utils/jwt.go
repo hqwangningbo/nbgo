@@ -20,7 +20,7 @@ func GenerateToken(id int, name string) (string, error) {
 		ID:   id,
 		Name: name,
 		RegisteredClaims: jwt.RegisteredClaims{
-			Issuer:    "gogofly",
+			Issuer:    "nbgo",
 			Subject:   "Token",
 			ExpiresAt: jwt.NewNumericDate(time.Now().Add(viper.GetDuration("jwt.expiresAt") * time.Minute)),
 			NotBefore: nil,

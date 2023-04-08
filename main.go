@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/hqwangningbo/gogofly/cmd"
-	"github.com/hqwangningbo/gogofly/utils"
+	"github.com/hqwangningbo/nbgo/cmd"
+	"github.com/hqwangningbo/nbgo/utils"
 )
 
-// @title gogofly学习go实战
+// @title nbgo学习go实战
 // @version v0.0.1
 // @description 还在努力学习go ...ing
 func main() {

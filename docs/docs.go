@@ -64,7 +64,7 @@ var SwaggerInfo = &swag.Spec{
 	Host:             "",
 	BasePath:         "",
 	Schemes:          []string{},
-	Title:            "gogofly学习go实战",
+	Title:            "nbgo学习go实战",
 	Description:      "还在努力学习go ...ing",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,

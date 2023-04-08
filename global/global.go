@@ -1,7 +1,7 @@
 package global
 
 import (
-	"github.com/hqwangningbo/gogofly/conf"
+	"github.com/hqwangningbo/nbgo/conf"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )

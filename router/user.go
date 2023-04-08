@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hqwangningbo/gogofly/api"
+	"github.com/hqwangningbo/nbgo/api"
 	"net/http"
 )
 
