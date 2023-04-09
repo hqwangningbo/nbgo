@@ -7,6 +7,7 @@ import (
 	"github.com/go-playground/validator/v10"
 	_ "github.com/hqwangningbo/nbgo/docs"
 	"github.com/hqwangningbo/nbgo/global"
+	"github.com/hqwangningbo/nbgo/middleware"
 	"github.com/spf13/viper"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -42,6 +43,8 @@ func InitRouter() {
 
 	// 初始化gin框架，并注册相关路由
 	r := gin.Default()
+	// 跨域处理
+	r.Use(middleware.Cors())
 	rgPublic := r.Group("/api/v1/public")
 	rgAuth := r.Group("/api/v1")
 
