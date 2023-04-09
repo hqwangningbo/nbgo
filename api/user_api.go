@@ -7,6 +7,10 @@ import (
 	"github.com/hqwangningbo/nbgo/utils"
 )
 
+const (
+	ERR_CODE_ADD_USER = 1001
+)
+
 type UserApi struct {
 	BaseApi
 	Service *service.UserService
@@ -49,5 +53,27 @@ func (userApi UserApi) Login(ctx *gin.Context) {
 			"user_info": user,
 			"token":     token,
 		},
+	})
+}
+
+func (userApi UserApi) AddUser(c *gin.Context) {
+	var userAddDto dto.UserAddDTO
+	if err := userApi.BuildRequest(BuildRequestOption{
+		Ctx: c, DTO: &userAddDto,
+	}).GetError(); err != nil {
+		return
+	}
+
+	err := userApi.Service.AddUser(&userAddDto)
+	if err != nil {
+		userApi.ServerFail(ResponseJson{
+			Code: ERR_CODE_ADD_USER,
+			Msg:  err.Error(),
+		})
+		return
+	}
+
+	userApi.OK(ResponseJson{
+		Data: userAddDto,
 	})
 }

@@ -32,3 +32,10 @@ func (userService *UserService) Login(userDto dto.UserLoginDTO) (model.User, err
 
 	return user, errResult
 }
+
+func (userService *UserService) AddUser(userAddDTO *dto.UserAddDTO) error {
+	if userService.Dao.CheckUserNameExist(userAddDTO.Name) {
+		return errors.New("Username Exist")
+	}
+	return userService.Dao.AddUser(userAddDTO)
+}

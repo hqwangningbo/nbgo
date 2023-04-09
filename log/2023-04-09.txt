@@ -4,3 +4,17 @@
 {"level":"INFO","time":"2023-04-09 00:05:54","msg":"Stop server success"}
 {"level":"INFO","time":"2023-04-09 13:25:17","msg":"Start server port: 8080"}
 {"level":"INFO","time":"2023-04-09 13:58:18","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:07:33","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:10:32","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:10:35","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:12:38","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:12:41","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:16:12","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:16:37","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:19:07","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:19:10","msg":"Start server port: 8080"}
+{"level":"ERROR","time":"2023-04-09 15:20:46","msg":"Stop server error: context deadline exceeded"}
+{"level":"INFO","time":"2023-04-09 15:22:05","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:24:36","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:24:52","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:26:37","msg":"Stop server success"}
