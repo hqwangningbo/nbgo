@@ -10,12 +10,12 @@ import (
 var stSigningKey = []byte(viper.GetString("jwt.sigingKey"))
 
 type JwtCustClaims struct {
-	ID   int
+	ID   uint
 	Name string
 	jwt.RegisteredClaims
 }
 
-func GenerateToken(id int, name string) (string, error) {
+func GenerateToken(id uint, name string) (string, error) {
 	jwtCustClaims := JwtCustClaims{
 		ID:   id,
 		Name: name,

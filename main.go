@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"github.com/hqwangningbo/nbgo/cmd"
-	"github.com/hqwangningbo/nbgo/utils"
 )
 
 // @title nbgo学习go实战
@@ -12,7 +10,4 @@ import (
 func main() {
 	defer cmd.Clean()
 	cmd.Start()
-
-	token, _ := utils.GenerateToken(1, "zs")
-	fmt.Println(token)
 }

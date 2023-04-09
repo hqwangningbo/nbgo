@@ -2,16 +2,20 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/hqwangningbo/nbgo/service"
 	"github.com/hqwangningbo/nbgo/service/dto"
+	"github.com/hqwangningbo/nbgo/utils"
 )
 
 type UserApi struct {
 	BaseApi
+	Service *service.UserService
 }
 
 func NewUserApi() UserApi {
 	return UserApi{
 		BaseApi: NewBaseApi(),
+		Service: service.NewUserService(),
 	}
 }
 
@@ -30,7 +34,20 @@ func (userApi UserApi) Login(ctx *gin.Context) {
 		return
 	}
 
+	user, err := userApi.Service.Login(userLoginDTO)
+	if err != nil {
+		userApi.Fail(ResponseJson{
+			Msg: err.Error(),
+		})
+		return
+	}
+
+	token, _ := utils.GenerateToken(user.ID, user.Name)
+
 	userApi.OK(ResponseJson{
-		Data: userLoginDTO,
+		Data: gin.H{
+			"user_info": user,
+			"token":     token,
+		},
 	})
 }

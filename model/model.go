@@ -8,5 +8,5 @@ type User struct {
 	RealName string `gorm:"size:128"`
 	Avatar   string `gorm:"size:255"`
 	Mobile   string `gorm:"size:128"`
-	password string `gorm:"size:128;not null"`
+	Password string `gorm:"size:128;not null"`
 }
