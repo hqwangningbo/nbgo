@@ -8,7 +8,8 @@ import (
 )
 
 const (
-	ERR_CODE_ADD_USER = 1001
+	ERR_CODE_ADD_USER       = 1001
+	ERR_CODE_GET_USER_BY_ID = 1002
 )
 
 type UserApi struct {
@@ -75,5 +76,24 @@ func (userApi UserApi) AddUser(c *gin.Context) {
 
 	userApi.OK(ResponseJson{
 		Data: userAddDto,
+	})
+}
+
+func (userApi UserApi) GetUserById(c *gin.Context) {
+	var IdDto dto.IdDto
+	if err := userApi.BuildRequest(BuildRequestOption{Ctx: c, DTO: &IdDto, BindParamsFromUri: true}).GetError(); err != nil {
+		return
+	}
+	user, err := userApi.Service.GetUserById(&IdDto)
+	if err != nil {
+		userApi.ServerFail(ResponseJson{
+			Code: ERR_CODE_GET_USER_BY_ID,
+			Msg:  err.Error(),
+		})
+		return
+	}
+
+	userApi.OK(ResponseJson{
+		Data: user,
 	})
 }

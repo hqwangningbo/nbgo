@@ -39,3 +39,7 @@ func (userService *UserService) AddUser(userAddDTO *dto.UserAddDTO) error {
 	}
 	return userService.Dao.AddUser(userAddDTO)
 }
+
+func (userService *UserService) GetUserById(idDto *dto.IdDto) (model.User, error) {
+	return userService.Dao.GetUserById(idDto.ID)
+}

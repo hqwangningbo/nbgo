@@ -44,3 +44,9 @@ func (userDao *UserDao) CheckUserNameExist(username string) bool {
 	userDao.Orm.Model(&model.User{}).Where("name=?", username).Count(&totalAmount)
 	return totalAmount > 0
 }
+
+func (userDao *UserDao) GetUserById(id uint) (model.User, error) {
+	var user model.User
+	err := userDao.Orm.First(&user, id).Error
+	return user, err
+}

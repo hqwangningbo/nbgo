@@ -18,3 +18,9 @@
 {"level":"INFO","time":"2023-04-09 15:24:36","msg":"Stop server success"}
 {"level":"INFO","time":"2023-04-09 15:24:52","msg":"Start server port: 8080"}
 {"level":"INFO","time":"2023-04-09 15:26:37","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:40:44","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:43:59","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:44:02","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:45:26","msg":"Stop server success"}
+{"level":"INFO","time":"2023-04-09 15:45:29","msg":"Start server port: 8080"}
+{"level":"INFO","time":"2023-04-09 15:46:51","msg":"Stop server success"}

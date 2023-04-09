@@ -16,6 +16,7 @@ func InitUserRoute() {
 		rgAuthUser := rgAuth.Group("user")
 		{
 			rgAuthUser.POST("", userApi.AddUser)
+			rgAuthUser.GET("/:id", userApi.GetUserById)
 		}
 	})
 }
